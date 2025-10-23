@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Lab10_MunozHerrera.Infrastructure;
+using Lab10_MunozHerrera.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Lab10_MunozHerrera.Infrastructure.Persistence.Data;

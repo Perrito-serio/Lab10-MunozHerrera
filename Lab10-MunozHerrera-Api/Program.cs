@@ -1,6 +1,9 @@
-// Este 'using' será necesario cuando creemos el archivo de extensión.
-// Si lo creas en una carpeta "Extensions", ajusta el namespace.
-// using Lab10-MunozHerrera_Api.Extensions; 
+
+using Lab10_MunozHerrera_Api.Extensions;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

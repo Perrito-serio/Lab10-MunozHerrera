@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lab10_MunozHerrera.Infrastructure;
+namespace Lab10_MunozHerrera.Domain.Entities;
 
 public partial class Ticket
 {
