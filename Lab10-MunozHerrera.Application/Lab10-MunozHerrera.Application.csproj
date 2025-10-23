@@ -4,10 +4,6 @@
     <ProjectReference Include="..\Lab10-MunozHerrera.Domain\Lab10-MunozHerrera.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
-
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <RootNamespace>Lab10_MunozHerrera.Application</RootNamespace>
