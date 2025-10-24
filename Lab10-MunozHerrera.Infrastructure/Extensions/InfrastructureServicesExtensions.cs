@@ -1,4 +1,3 @@
-// --- USINGS CORRECTOS ---
 using Lab10_MunozHerrera.Application.Interfaces;
 using Lab10_MunozHerrera.Domain.Interfaces;
 using Lab10_MunozHerrera.Infrastructure.Persistence.Data;
@@ -14,11 +13,10 @@ public static class InfrastructureServicesExtensions
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
-        // 1. Configurar DbContext
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
-        services.AddTransient<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
         
         services.AddScoped<IAuthService, AuthService>();
 
