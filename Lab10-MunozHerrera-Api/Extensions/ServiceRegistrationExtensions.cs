@@ -1,8 +1,10 @@
 using System.Text;
+using Lab10_MunozHerrera.Application.Common;
 using Lab10_MunozHerrera.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using MediatR;
 
 namespace Lab10_MunozHerrera_Api.Extensions;
 
@@ -51,6 +53,9 @@ public static class ServiceRegistrationExtensions
                 }
             });
         });
+        
+        // Registra MediatR y escanea el ensamblado de Application
+        services.AddMediatR(typeof(ApplicationAssemblyMarker).Assembly);
         
         services.AddControllers();
         services.AddEndpointsApiExplorer(); // Necesario para Swagger
