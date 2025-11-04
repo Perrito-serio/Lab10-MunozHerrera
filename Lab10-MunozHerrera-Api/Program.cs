@@ -37,5 +37,10 @@ RecurringJob.AddOrUpdate<INotificationService>(
     service => service.SendNotificationAsync("usuario_diario"),
     Cron.Daily);
 
+// Registra el job de limpieza para que se ejecute diariamente
+RecurringJob.AddOrUpdate<ICleanupService>(
+    "daily-ticket-cleanup",           
+    service => service.CleanOldTicketsAsync(),
+    Cron.Daily);                               
 
 app.Run();
