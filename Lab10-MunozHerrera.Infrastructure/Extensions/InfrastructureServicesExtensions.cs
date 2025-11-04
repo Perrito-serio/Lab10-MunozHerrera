@@ -22,7 +22,7 @@ public static class InfrastructureServicesExtensions
         
         services.AddScoped<IAuthService, AuthService>();
 
-        
+        services.AddScoped<INotificationService, NotificationService>();
         // 1. Configura Hangfire
         services.AddHangfire(config =>
             // Usa la nueva sintaxis con "options" para evitar la advertencia
